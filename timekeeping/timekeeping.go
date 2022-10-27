@@ -109,8 +109,6 @@ func ScheduleFile(startTime string, session *discordgo.Session, guildID string, 
 
 	interval := time.Hour * 24 // 24 hours
 
-	log.Printf("Scheduling file: %s %s %s %s", startTime, fileName, guildID, channelID)
-
 	for range cron.Every(ctx, start, interval) {
 		// log.Printf("Running file: %s %s %s %s", startTime, fileName, guildID, channelID)
 		log.Printf("TIMEKEEPING: Playing %s", fileName)
