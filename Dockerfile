@@ -7,4 +7,4 @@ COPY . .
 RUN go mod download
 RUN go build -o bot github.com/Keanu73/AutumnSoaringBot
 
-CMD [ "/bot" ]
+CMD [ "/app/bot" ]
