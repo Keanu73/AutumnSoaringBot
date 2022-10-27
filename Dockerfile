@@ -1,5 +1,8 @@
 FROM golang:1.19-alpine
 
+RUN apk add --no-cache tzdata
+ENV TZ=Europe/London
+
 WORKDIR /app
 
 COPY . .

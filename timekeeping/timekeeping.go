@@ -46,7 +46,10 @@ func ScheduleCrons(session *discordgo.Session) {
 
 	for _, file := range filesToPlay {
 		log.Printf("Scheduling file: %s %s %s %s", file.startTime, file.fileName, guildID, vcID)
-		ScheduleFile(file.startTime, session, guildID, vcID, file.fileName)
+		file := file
+		go func() {
+			ScheduleFile(file.startTime, session, guildID, vcID, file.fileName)
+		}()
 	}
 }
 
