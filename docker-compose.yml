@@ -5,3 +5,14 @@ services:
       dockerfile: Dockerfile
       context: .
     restart: always
+    env_file: .env
+  db:
+    image: mongo:6.0.2
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db_data:/data/db
