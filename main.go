@@ -8,7 +8,7 @@ import (
 	"syscall"
 
 	"github.com/FedorLap2006/disgolf"
-	"github.com/Keanu73/AutumnSoaringBot/timekeeping"
+	"github.com/Keanu73/AutumnSoaringBot/modules"
 	"github.com/bwmarrin/discordgo"
 	_ "github.com/joho/godotenv/autoload"
 )
@@ -44,17 +44,18 @@ func main() {
 		discordgo.UpdateStatusData{
 			Activities: []*discordgo.Activity{
 				{
-					Name: "people become better by the day",
+					Name: "people better themselves",
 					Type: discordgo.ActivityTypeWatching,
 				},
 			},
 		},
 	)
 
-	// Schedules timekeeping crons
-	timekeeping.ScheduleCrons(bot.Session)
+	// Schedules timekeeping & VC access crons
+	modules.Timekeeping.ScheduleCrons(bot.Session)
+	modules.VCAccess.ScheduleCrons(bot.Session)
 
-	// Allows for graceful interrupt
+	// Allows for graceful Ctrl + C
 	ech := make(chan os.Signal)
 	signal.Notify(ech, os.Kill, syscall.SIGTERM) //nolint:govet,staticcheck
 	<-ech

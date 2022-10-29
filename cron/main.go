@@ -1,5 +1,5 @@
 /*
-Thanks Stephen AfamO for the helper functions:
+Thanks to Stephen Afamo for the helper functions:
 https://stephenafamo.com/blog/posts/better-scheduling-in-go
 https://github.com/stephenafamo/kronika/blob/master/kronika.go
 
