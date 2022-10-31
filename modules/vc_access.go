@@ -15,8 +15,8 @@ var accessTimes = []struct {
 	startTime string
 	lock      bool
 }{
-	{"2022-10-30 06:25:00", false},
-	{"2022-10-30 08:00:00", true},
+	{"2022-10-31 06:25:00", false},
+	{"2022-10-31 08:00:00", true},
 }
 
 func (*vcaccess) ScheduleCrons(session *discordgo.Session) {

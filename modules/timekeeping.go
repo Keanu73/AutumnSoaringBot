@@ -32,10 +32,10 @@ var filesToPlay = []struct {
 	startTime string
 	fileName  string
 }{
-	{"2022-10-28 06:30:00", "workout.dca"},
-	{"2022-10-28 06:40:00", "meditate.dca"},
-	{"2022-10-28 06:45:00", "journal.dca"},
-	{"2022-10-28 06:50:00", "discussion.dca"},
+	{"2022-10-31 06:30:00", "workout.dca"},
+	{"2022-10-31 06:40:00", "meditate.dca"},
+	{"2022-10-31 06:45:00", "journal.dca"},
+	{"2022-10-31 06:50:00", "discussion.dca"},
 }
 
 func (*timekeeping) ScheduleCrons(session *discordgo.Session) {
