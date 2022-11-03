@@ -16,3 +16,4 @@
 tmp/
 db_data/
 bot
+.env

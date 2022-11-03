@@ -11,6 +11,8 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
+/* TODO: if everyone leaves VC.. lock automatically? */
+
 var accessTimes = []struct {
 	startTime string
 	lock      bool
